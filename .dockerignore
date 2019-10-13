@@ -1,0 +1,14 @@
+.bundle
+.dockerignore
+.DS_Store
+.env
+.env.example
+.git
+.gitignore
+.idea
+.ruby-version
+docker-compose.yml
+Dockerfile
+log/*
+README.md
+tmp/*
