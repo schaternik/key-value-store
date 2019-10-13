@@ -7,7 +7,7 @@ services:
         - BUNDLE_WITHOUT=production
     command: "bundle exec puma -C config/puma.rb"
     depends_on:
-      - db
+      - redis
     env_file:
       - .env
     environment:
@@ -16,7 +16,7 @@ services:
       - 3000:3000
     volumes:
       - .:/usr/src/app
-  db:
+  redis:
     image: redis:alpine
     ports:
       - "6379:6379"

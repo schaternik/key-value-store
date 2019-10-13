@@ -8,6 +8,7 @@ ruby "~> 2.6.5"
 
 gem "dry-container"
 gem "puma"
+gem "redis"
 gem "roda"
 gem "zeitwerk"
 
