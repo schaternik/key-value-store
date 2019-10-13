@@ -7,10 +7,9 @@ class Application < ::Roda
   plugin :json_parser
   plugin :json
 
-  # rubocop:disable Metrics/BlockLength
   route do |r|
     r.get "health" do
-      "ok"
+      "OK"
     end
 
     r.on "keys" do
@@ -43,5 +42,4 @@ class Application < ::Roda
       end
     end
   end
-  # rubocop:enable Metrics/BlockLength
 end

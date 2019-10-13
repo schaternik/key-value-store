@@ -21,6 +21,7 @@ group :development, :test do
 end
 
 group :test do
+  gem "mock_redis"
   gem "rack-test"
   gem "rspec"
   gem "simplecov", require: false

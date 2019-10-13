@@ -30,3 +30,15 @@ Layout/AlignParameters:
 
 Style/AccessModifierDeclarations:
   EnforcedStyle: inline
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+    - 'app/application.rb'
+

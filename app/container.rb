@@ -5,10 +5,11 @@ class Container
   extend Dry::Container::Mixin
 
   register :logger, memoize: true do
-    Logger.new(STDOUT, progname: "key-store-value")
+    device = ENV["RACK_ENV"] == "test" ? nil : STDOUT
+    Logger.new(device, progname: "key-store-value")
   end
 
   register :redis, memoize: true do
-    Redis.new(url: ENV["REDIS_URL"])
+    ENV["RACK_ENV"] == "test" ? MockRedis.new : Redis.new(url: ENV["REDIS_URL"])
   end
 end
