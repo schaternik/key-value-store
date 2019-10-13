@@ -21,3 +21,12 @@ Style/StringLiterals:
 
 Style/StringLiteralsInInterpolation:
   EnforcedStyle: double_quotes
+
+Layout/AlignArguments:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Style/AccessModifierDeclarations:
+  EnforcedStyle: inline

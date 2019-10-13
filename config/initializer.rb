@@ -7,5 +7,6 @@ require "logger"
 
 Zeitwerk::Loader.new.tap do |loader|
   loader.push_dir("app")
+  loader.push_dir("app/services")
   loader.setup
 end

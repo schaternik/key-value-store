@@ -8,11 +8,12 @@ API for key-value store application.
 
 ### Functional
 
-- [ ] Get a value for a key `GET /keys/{id}`
-- [ ] Create a record `PUT /keys`
-- [ ] Get all keys and values
-- [ ] Check if a value exists `HEAD /keys/{id}`
-- [ ] Delete a value `DELETE /keys/{id}`
+- [x] Get a value for a key `GET /keys/{id}`
+- [x] Check if a value exists `HEAD /keys/{id}`
+- [x] Delete a value `DELETE /keys/{id}`
+- [x] Get all keys and values `GET /keys`
+- [x] Create a record `PUT /keys`
+- [x] Delete all keys and values `DELETE /keys`
 - [ ] Set an expiry time when adding a value `PUT /keys?expire_in=60`
 - [ ] Support wildcard keys when getting all values `GET /keys?filter=wo$d`
 
@@ -30,3 +31,4 @@ API for key-value store application.
 - run specs `docker-compose run --rm app bundle exec rspec`
 - start a development console `docker-compose run --rm app bundle exec bin/console`
 - run a code linter `docker-compose run --rm app bundle exec rubocop`
+- run a code console `docker-compose run --rm app bundle exec bin/console`
