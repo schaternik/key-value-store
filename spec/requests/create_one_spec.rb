@@ -17,4 +17,19 @@ describe "PUT /keys", type: :request do
     expect(last_response.ok?).to eq(true)
     expect(last_response.body).to eq("OK")
   end
+
+  context "when `expire_in` set" do
+    let(:request_body) do
+      { "key" => "value" }
+    end
+
+    before do
+      put "/keys?expire_in=60", request_body
+    end
+
+    it "returns OK and status OK" do
+      expect(last_response.ok?).to eq(true)
+      expect(last_response.body).to eq("OK")
+    end
+  end
 end
