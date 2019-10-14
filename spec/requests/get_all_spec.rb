@@ -19,8 +19,30 @@ describe "GET /keys", type: :request do
     get "/keys"
   end
 
-  it "returns keys and values" do
+  it "returns keys and their values" do
     expect(last_response.ok?).to eq(true)
     expect(last_response.body).to eq(response.to_json)
+  end
+
+  context "when filter passed" do
+    let(:response) do
+      {
+        "word" => "value"
+      }
+    end
+
+    before do
+      Container[:redis].set("key1", "value1")
+      Container[:redis].set("key2", "value2")
+      Container[:redis].set("word", "value")
+      Container[:redis].set("word2", "wordvalue2")
+
+      get "/keys?filter=wo?d"
+    end
+
+    it "returns keys matched to filter and their values" do
+      expect(last_response.ok?).to eq(true)
+      expect(last_response.body).to eq(response.to_json)
+    end
   end
 end

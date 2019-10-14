@@ -15,14 +15,14 @@ API for key-value store application.
 - [x] Create a record `PUT /keys`
 - [x] Delete all keys and values `DELETE /keys`
 - [ ] Set an expiry time when adding a value `PUT /keys?expire_in=60`
-- [ ] Support wildcard keys when getting all values `GET /keys?filter=wo$d`
+- [x] Support wildcard keys when getting all values `GET /keys?filter=wo*d`
 
 ### Support
 
 - [x] Dockerized
-- [ ] 100% spec coverage
+- [x] 100% spec coverage
 - [ ] Documentation
-- [ ] Log any output to stdout
+- [x] Log any output to stdout
 - [ ] Integration with monitoring system
 
 ## Development

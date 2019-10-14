@@ -29,7 +29,7 @@ class Application < ::Roda
 
       r.is do
         r.get do
-          GetAll.new.call
+          GetAll.new.call(params: r.params)
         end
 
         r.put do
